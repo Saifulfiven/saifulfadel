@@ -8,7 +8,7 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Semua Barang</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Semua aset</p>
                     <h5 class="font-weight-bolder mb-0">
                       230
                     </h5>
@@ -29,7 +29,7 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Barang Rusak Hari ini</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">aset Rusak Hari ini</p>
                     <h5 class="font-weight-bolder mb-0">
                       8
                       <span class="text-success text-sm font-weight-bolder"></span>
@@ -98,7 +98,7 @@
             <div class="card-header pb-0">
               <div class="row">
                 <div class="col-lg-6 col-7">
-                  <h6>Laporan Kondisi Barang hari ini</h6>
+                  <h6>Laporan Kondisi aset hari ini</h6>
                   <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
                     <span class="font-weight-bold ms-1">Rabu, </span>11  Juni 2024
@@ -117,33 +117,33 @@
             <div class="card-body px-0 pb-2">
               <div class="table-responsive">
               <?php
-              $data_barang = [
-                ['nama_barang' => 'Barang 1', 'kode_barang' => 'K001', 'kondisi_barang' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_barang' => 'Barang 2', 'kode_barang' => 'K002', 'kondisi_barang' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
-                ['nama_barang' => 'Barang 3', 'kode_barang' => 'K003', 'kondisi_barang' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
-                ['nama_barang' => 'Barang 4', 'kode_barang' => 'K004', 'kondisi_barang' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_barang' => 'Barang 5', 'kode_barang' => 'K005', 'kondisi_barang' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
-                ['nama_barang' => 'Barang 6', 'kode_barang' => 'K006', 'kondisi_barang' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
-                ['nama_barang' => 'Barang 7', 'kode_barang' => 'K007', 'kondisi_barang' => 'Baik', 'dipakai_oleh' => 'Admin'],
-                ['nama_barang' => 'Barang 8', 'kode_barang' => 'K008', 'kondisi_barang' => 'Rusak', 'dipakai_oleh' => 'Pengguna']
+              $data_aset = [
+                ['nama_aset' => 'aset 1', 'kode_aset' => 'K001', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
+                ['nama_aset' => 'aset 2', 'kode_aset' => 'K002', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
+                ['nama_aset' => 'aset 3', 'kode_aset' => 'K003', 'kondisi_aset' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
+                ['nama_aset' => 'aset 4', 'kode_aset' => 'K004', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
+                ['nama_aset' => 'aset 5', 'kode_aset' => 'K005', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna'],
+                ['nama_aset' => 'aset 6', 'kode_aset' => 'K006', 'kondisi_aset' => 'Rusak Ringan', 'dipakai_oleh' => 'Pengguna2'],
+                ['nama_aset' => 'aset 7', 'kode_aset' => 'K007', 'kondisi_aset' => 'Baik', 'dipakai_oleh' => 'Admin'],
+                ['nama_aset' => 'aset 8', 'kode_aset' => 'K008', 'kondisi_aset' => 'Rusak', 'dipakai_oleh' => 'Pengguna']
               ];
               ?>
                 <table class="table align-items-center mb-0">
                   <thead role="row">
                     <tr>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Nama Barang</th>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kode Barang</th>
-                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kondisi Barang</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Nama aset</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kode aset</th>
+                      <th class="text-center text-uppercase text-secondary font-weight-bolder">Kondisi aset</th>
                       <th class="text-center text-uppercase text-secondary font-weight-bolder">Dipakai Oleh</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($data_barang as $barang)
+                    @foreach ($data_aset as $aset)
                       <tr role="row">
-                        <td class="text-center">{{ $barang['nama_barang'] }}</td>
-                        <td class="text-center">{{ $barang['kode_barang'] }}</td>
-                        <td class="text-center">{{ $barang['kondisi_barang'] }}</td>
-                        <td class="text-center">{{ $barang['dipakai_oleh'] }}</td>
+                        <td class="text-center">{{ $aset['nama_aset'] }}</td>
+                        <td class="text-center">{{ $aset['kode_aset'] }}</td>
+                        <td class="text-center">{{ $aset['kondisi_aset'] }}</td>
+                        <td class="text-center">{{ $aset['dipakai_oleh'] }}</td>
                       </tr>
                     @endforeach
                     

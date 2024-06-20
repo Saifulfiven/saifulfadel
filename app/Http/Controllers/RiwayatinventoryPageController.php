@@ -11,7 +11,7 @@ class RiwayatinventoryPageController extends Controller
     public function index()
     {
         //$riwayatinventory = riwayatinventory::latest()->paginate(5);
-        $riwayatinventory = "riwayat Inventory";
+        $riwayatinventory = "riwayat Aset";
         $header = false;
         return view('riwayatinventory.index', compact('riwayatinventory','header'));
         //return view('landingpage.layout');
@@ -23,7 +23,7 @@ class RiwayatinventoryPageController extends Controller
     public function home()
     {
 
-        $toptitle = "Dashboard - Riwayat inventory";
+        $toptitle = "Dashboard - Riwayat Aset";
         $header = false;
         //$riwayatinventorys = riwayatinventorys::latest()->paginate(5);
         return view('riwayatinventory.tabel', compact('header','toptitle'));
@@ -32,7 +32,7 @@ class RiwayatinventoryPageController extends Controller
 
     public function lihat()
     {
-        $toptitle = "Dashboard - Lihat Riwayat inventory";
+        $toptitle = "Dashboard - Lihat Riwayat Aset";
         $header = false;
         //$riwayatinventorys = riwayatinventorys::latest()->paginate(5);
         return view('riwayatinventory.lihat', compact('header','toptitle'));
@@ -44,7 +44,7 @@ class RiwayatinventoryPageController extends Controller
         //$products = Product::latest()->paginate(5);
         //$riwayatinventory = riwayatinventory::latest()->paginate(5);
         //$kegiatan = Kegiatan::latest()->paginate(5);
-        $toptitle = "Tambah Data riwayatinventory";
+        $toptitle = "Tambah Data riwayat Aset";
         $header = false;
         return view('riwayatinventory.tambah', compact('header','toptitle'));
         //return view('landingpage.layout');

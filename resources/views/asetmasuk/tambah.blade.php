@@ -17,16 +17,16 @@
 
                 <div class="card">
                     <div class="card-header d-flex justify-content-between bg-primary text-white">
-                        <strong>Tambah Barang Masuk</strong>
-                        <a href="/admin/barangmasuk" class="btn btn-sm btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
+                        <strong>Tambah Aset Masuk</strong>
+                        <a href="/admin/asetmasuk" class="btn btn-sm btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
                     </div>
                     <div class="card-body">
                             
-                    <button class="btn btn-primary" onclick="informasibarang()">Informasi Barang</button>
-                    <button class="btn btn-primary" onclick="tambahbarang()">Tambah Barang</button>
+                    <button class="btn btn-primary" onclick="informasiaset()">Informasi Aset</button>
+                    <button class="btn btn-primary" onclick="tambahaset()">Tambah Aset</button>
 
                     
-                    <div id="informasibarang" style="margin-bottom:20px">
+                    <div id="informasiaset" style="margin-bottom:20px">
                     <div class="row">
                         <div class="col-md-6" >
                             <div class="card border border-primary shadow p-3" style="border: 1px solid; padding: 10px;">
@@ -35,11 +35,11 @@
                                 <div class="card-body">
 
                                     <div class="form-group">
-                                        <label for="judul" class="col-sm-4 col-form-label">Kode Barang</label>
-                                        <input type="text" name="kodebarang" class="form-control" value="BRG007" readonly>
+                                        <label for="judul" class="col-sm-4 col-form-label">Kode aset</label>
+                                        <input type="text" name="kodeaset" class="form-control" value="BRG007" readonly>
                                     </div>
                                     <div class="form-group">
-                                        <label for="judul" class="col-sm-4 col-form-label">Nama Barang</label>
+                                        <label for="judul" class="col-sm-4 col-form-label">Nama aset</label>
                                         <input type="text" name="judul" class="form-control" value="Komputer">
                                     </div>
                                     <div class="form-group">
@@ -72,7 +72,7 @@
                                     <hr style="border-color: purple;border:2px solid">
                                 <div class="card-body">
                                     <div class="col-md-12">
-                                        <img id="preview-image" src="/images/barang/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
+                                        <img id="preview-image" src="/images/aset/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -89,17 +89,17 @@
                     </div>
                                     </div>
 
-                    <div id="tambahbarang"  style="display:none;margin-bottom:20px">
+                    <div id="tambahaset"  style="display:none;margin-bottom:20px">
                     <div class="row">
                         <div class="col-md-6" >
                             <div class="card border border-primary shadow p-3" style="border: 1px solid; padding: 10px;">
-                                Tambah Data Barang
+                                Tambah Data aset
 
                                 <hr style="border-color: purple;border:2px solid">
                                 
                                 <div class="card-body">
                                 <div class="form-group">
-                                        <label for="judul" class="col-sm-4 col-form-label">Nama Barang</label>
+                                        <label for="judul" class="col-sm-4 col-form-label">Nama aset</label>
                                         <input type="text" name="judul" class="form-control" value="Komputer">
                                     </div>
                                     <div class="form-group">
@@ -120,7 +120,7 @@
 
                                     
                                     <div class="form-group">
-                                        <img id="preview-image" src="/images/barang/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
+                                        <img id="preview-image" src="/images/aset/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
                                     </div>
                                     <div class="form-group">
                                             <label for="gambar" class="col-sm-4 col-form-label">Gambar</label>
@@ -139,20 +139,20 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card border border-primary shadow p-3" style="border: 1px solid; padding: 10px;">
-                                Tabel Data Barang
+                                Tabel Data aset
                                 <hr style="border-color: purple;border:2px solid">
                                 <div class="card-body">
                                     <table class="table table-bordered table-striped"  id="tabel-data">
                                         <thead>
                                             <tr>
-                                                <th>Nama Barang</th>
+                                                <th>Nama aset</th>
                                                 <th>Jumlah</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         @for ($i = 0; $i < 10; $i++)
                                             <tr>
-                                                <td>Nama Barang {{ $i+1 }}</td>
+                                                <td>Nama aset {{ $i+1 }}</td>
                                                 <td>{{ rand(1, 100) }}</td>
                                             </tr>
                                         @endfor
@@ -174,7 +174,7 @@
 
                                     <div class="form-group">
                                         <label for="judul" class="col-sm-4 col-form-label">Tanggal Beli</label>
-                                        <input type="date" name="kodebarang" class="form-control" value="BRG007" readonly>
+                                        <input type="date" name="kodeaset" class="form-control" value="BRG007" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="judul" class="col-sm-4 col-form-label">Toko Distributor</label>
@@ -269,14 +269,14 @@
     }, 2000);
 
     
-    function informasibarang() {
-        document.getElementById('tambahbarang').style.display = 'none';
-        document.getElementById('informasibarang').style.display = 'block';
+    function informasiaset() {
+        document.getElementById('tambahaset').style.display = 'none';
+        document.getElementById('informasiaset').style.display = 'block';
     }
 
-    function tambahbarang() {
-        document.getElementById('tambahbarang').style.display = 'block';
-        document.getElementById('informasibarang').style.display = 'none';
+    function tambahaset() {
+        document.getElementById('tambahaset').style.display = 'block';
+        document.getElementById('informasiaset').style.display = 'none';
     }
 </script>
 @endsection

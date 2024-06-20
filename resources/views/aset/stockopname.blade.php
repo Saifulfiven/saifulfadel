@@ -22,7 +22,7 @@
             @endif
 
             <div class="card-header pb-0 position-relative mb-5">
-              <h6>Data Barang</h6>
+              <h6>Data Aset</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -35,7 +35,6 @@
                         <th class="text-secondary">Merk & Type</th>
                         <th class="text-secondary">Jumlah</th>
                         <th class="text-secondary">Jumlah Sekarang</th>
-                        <th class="text-secondary">Status</th>
                       <th class="text-secondary">Created at</th>
                       <th class="text-secondary">Updated at</th>
                       <th class="text-secondary">Aksi</th>
@@ -43,7 +42,7 @@
                   </thead>
                     <tbody>
                     <?php
-                    $barang = [
+                    $aset = [
                         ['nama' => 'Kursi Kayu', 'kode' => 'BRG001', 'tipe' => 'Furniture', 'jumlah' => 10, 'jumlahSekarang' => 5, 'perbandingan' => -5],
                         ['nama' => 'Meja Belajar', 'kode' => 'BRG002', 'tipe' => 'Furniture', 'jumlah' => 20, 'jumlahSekarang' => 15, 'perbandingan' => -5],
                         ['nama' => 'Lemari Pakaian', 'kode' => 'BRG003', 'tipe' => 'Furniture', 'jumlah' => 15, 'jumlahSekarang' => 7, 'perbandingan' => -8],
@@ -74,10 +73,10 @@
                         ['nama' => 'Drone', 'kode' => 'BRG029', 'tipe' => 'Elektronik', 'jumlah' => 8, 'jumlahSekarang' => 5, 'perbandingan' => -3],
                         ['nama' => 'VR Headset', 'kode' => 'BRG030', 'tipe' => 'Elektronik', 'jumlah' => 12, 'jumlahSekarang' => 8, 'perbandingan' => -4],
                     ];
-                    foreach($barang as $index => $item)
+                    foreach($aset as $index => $item)
                         ?>
 
-                    @foreach ($barang as $index => $item)
+                    @foreach ($aset as $index => $item)
                     <tr>
                         <td>{{ $index+1 }}</td>
                         <td>{{ $item['nama'] }}</td>
@@ -85,16 +84,13 @@
                         <td>{{ $item['tipe'] }}</td>
                         <td>{{ $item['jumlah'] }}</td>
                         <td>{{ $item['jumlahSekarang'] }}</td>
-                        <td><span style="{{ $item['jumlah'] < $item['jumlahSekarang'] ? 'background-color: red; color: white;' : 'background-color: green;' }};padding:4px;color:white">
-                            {{ $item['jumlah'] < $item['jumlahSekarang'] ? 'Stock Opname' : 'Aman' }}
-                        </span>
-                        </td>
+                        
 
                         <td>2020-06-03</td>
                         <td>2021-04-04</td>
                         <td class="text-center">
                         @if($item['jumlah'] < $item['jumlahSekarang'])
-                            <a href='/admin/barangmasuk/tambah' class="btn btn-sm btn-primary">Tambah</a>
+                            <a href='/admin/asetmasuk/tambah' class="btn btn-sm btn-primary">Tambah</a>
                         @endif
                         </td>
                     </tr>

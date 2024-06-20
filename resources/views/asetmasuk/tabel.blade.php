@@ -22,8 +22,8 @@
             @endif
 
             <div class="card-header pb-0 position-relative mb-5">
-              <h6>Data Barang</h6>
-              <a href="{{ url('admin/barang/tambah') }}" class="btn btn-success position-absolute end-0 top-0 mt-3 me-3">Tambah Barang</a>
+              <h6>Data Aset Masuk</h6>
+              <a href="{{ url('admin/asetmasuk/tambah') }}" class="btn btn-success position-absolute end-0 top-0 mt-3 me-3">+ Aset Masuk</a>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -31,61 +31,59 @@
                   <thead>
                     <tr>
                       <th class="text-secondary">No</th>
-                        <th class="text-secondary">nama Aset</th>
-                        <th class="text-secondary">Kode</th>
-                        <th class="text-secondary">Merk & Type</th>
+                        <th class="text-secondary">Nama aset</th>
+                        <th class="text-secondary">Jumlah</th>
+                        <th class="text-secondary">Kategori</th>
                       <th class="text-secondary">Created at</th>
-                      <th class="text-secondary">Updated at</th>
-                      <th class="text-secondary">Aksi</th>
+                      <th class="text-secondary text-center">Aksi</th>
                     </tr>
                   </thead>
                     <tbody>
                     <?php
-                    $barang = [
-                        ['nama' => 'Kursi Kayu', 'kode' => 'BRG001', 'tipe' => 'Furniture'],
-                        ['nama' => 'Meja Belajar', 'kode' => 'BRG002', 'tipe' => 'Furniture'],
-                        ['nama' => 'Lemari Pakaian', 'kode' => 'BRG003', 'tipe' => 'Furniture'],
-                        ['nama' => 'Sofa', 'kode' => 'BRG004', 'tipe' => 'Furniture'],
-                        ['nama' => 'Ranjang', 'kode' => 'BRG005', 'tipe' => 'Furniture'],
-                        ['nama' => 'Rak Buku', 'kode' => 'BRG006', 'tipe' => 'Furniture'],
-                        ['nama' => 'Komputer', 'kode' => 'BRG007', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Monitor', 'kode' => 'BRG008', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Keyboard', 'kode' => 'BRG009', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Mouse', 'kode' => 'BRG010', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Printer', 'kode' => 'BRG011', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Scanner', 'kode' => 'BRG012', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Speaker', 'kode' => 'BRG013', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Headset', 'kode' => 'BRG014', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Proyektor', 'kode' => 'BRG015', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Kamera', 'kode' => 'BRG016', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Lensa Kamera', 'kode' => 'BRG017', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Tripod', 'kode' => 'BRG018', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Microphone', 'kode' => 'BRG019', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Lampu', 'kode' => 'BRG020', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Charger', 'kode' => 'BRG021', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Power Bank', 'kode' => 'BRG022', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Flash Disk', 'kode' => 'BRG023', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Hard Disk Eksternal', 'kode' => 'BRG024', 'tipe' => 'Aksesoris'],
-                        ['nama' => 'Laptop', 'kode' => 'BRG025', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Tablet', 'kode' => 'BRG026', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Smartphone', 'kode' => 'BRG027', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Smartwatch', 'kode' => 'BRG028', 'tipe' => 'Elektronik'],
-                        ['nama' => 'Drone', 'kode' => 'BRG029', 'tipe' => 'Elektronik'],
-                        ['nama' => 'VR Headset', 'kode' => 'BRG030', 'tipe' => 'Elektronik']
+                    $aset = [
+                        ['nama' => 'Kursi Kayu', 'jumlah' => '3', 'tipe' => 'Furniture'],
+                        ['nama' => 'Meja Belajar', 'jumlah' => '5', 'tipe' => 'Furniture'],
+                        ['nama' => 'Lemari Pakaian', 'jumlah' => '8', 'tipe' => 'Furniture'],
+                        ['nama' => 'Sofa', 'jumlah' => '3', 'tipe' => 'Furniture'],
+                        ['nama' => 'Ranjang', 'jumlah' => '12', 'tipe' => 'Furniture'],
+                        ['nama' => 'Rak Buku', 'jumlah' => '64', 'tipe' => 'Furniture'],
+                        ['nama' => 'Komputer', 'jumlah' => '45', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Monitor', 'jumlah' => '22', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Keyboard', 'jumlah' => '32', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Mouse', 'jumlah' => '23', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Printer', 'jumlah' => '54', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Scanner', 'jumlah' => '43', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Speaker', 'jumlah' => '22', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Headset', 'jumlah' => '55', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Proyektor', 'jumlah' => '34', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Kamera', 'jumlah' => '23', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Lensa Kamera', 'jumlah' => '23', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Tripod', 'jumlah' => '11', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Microphone', 'jumlah' => '32', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Lampu', 'jumlah' => '43', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Charger', 'jumlah' => '5', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Power Bank', 'jumlah' => '6', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Flash Disk', 'jumlah' => '2', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Hard Disk Eksternal', 'jumlah' => 'BRG024', 'tipe' => 'Aksesoris'],
+                        ['nama' => 'Laptop', 'jumlah' => '34', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Tablet', 'jumlah' => '334', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Smartphone', 'jumlah' => '33', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Smartwatch', 'jumlah' => '32', 'tipe' => 'Elektronik'],
+                        ['nama' => 'Drone', 'jumlah' => '43', 'tipe' => 'Elektronik'],
+                        ['nama' => 'VR Headset', 'jumlah' => '23', 'tipe' => 'Elektronik']
                     ];
                         ?>
 
-                    @foreach ($barang as $index => $item)
+                    @foreach ($aset as $index => $item)
                     <tr>
                         <td>{{ $index+1 }}</td>
                         <td>{{ $item['nama'] }}</td>
-                        <td>{{ $item['kode'] }}</td>
+                        <td>{{ $item['jumlah'] }}</td>
                         <td>{{ $item['tipe'] }}</td>
                         <td>2020-06-03</td>
-                        <td>2021-04-04</td>
                         <td class="text-center">
-                            <a href="{{ url('admin/barang/ubah/2') }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="{{ url('admin/barang/hapus/2') }}" class="btn btn-sm btn-danger">Hapus</a>
+                            <a href="{{ url('admin/aset/ubah/2') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{{ url('admin/aset/hapus/2') }}" class="btn btn-sm btn-danger">Hapus</a>
                         </td>
                     </tr>
                     @endforeach

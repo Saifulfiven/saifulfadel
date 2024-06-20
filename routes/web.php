@@ -49,21 +49,21 @@ Route::post('/admin/kategori/update', 'App\Http\Controllers\KategoriPageControll
 Route::get('/admin/kategori/hapus/{id}', 'App\Http\Controllers\KategoriPageController@hapus');
 
 //Master Barang
-Route::get('/admin/barang', 'App\Http\Controllers\BarangPageController@home');
-Route::get('/admin/stockopname', 'App\Http\Controllers\BarangPageController@stockopname');
-Route::get('/admin/barang/tambah', 'App\Http\Controllers\BarangPageController@tambah');
-Route::post('/admin/barang/tambah', 'App\Http\Controllers\BarangPageController@simpan');
-Route::get('/admin/barang/ubah/{id}', 'App\Http\Controllers\BarangPageController@ubah');
-Route::post('/admin/barang/update', 'App\Http\Controllers\BarangPageController@update');
-Route::get('/admin/barang/hapus/{id}', 'App\Http\Controllers\BarangPageController@hapus');
+Route::get('/admin/aset', 'App\Http\Controllers\AsetPageController@home');
+Route::get('/admin/stockopname', 'App\Http\Controllers\AsetPageController@stockopname');
+Route::get('/admin/aset/tambah', 'App\Http\Controllers\AsetPageController@tambah');
+Route::post('/admin/aset/tambah', 'App\Http\Controllers\AsetPageController@simpan');
+Route::get('/admin/aset/ubah/{id}', 'App\Http\Controllers\AsetPageController@ubah');
+Route::post('/admin/aset/update', 'App\Http\Controllers\AsetPageController@update');
+Route::get('/admin/aset/hapus/{id}', 'App\Http\Controllers\AsetPageController@hapus');
 
 //Barang Masuk
-Route::get('/admin/barangmasuk', 'App\Http\Controllers\BarangmasukPageController@home');
-Route::get('/admin/barangmasuk/tambah', 'App\Http\Controllers\BarangmasukPageController@tambah');
-Route::post('/admin/barangmasuk/tambah', 'App\Http\Controllers\BarangmasukPageController@simpan');
-Route::get('/admin/barangmasuk/ubah/{id}', 'App\Http\Controllers\BarangmasukPageController@ubah');
-Route::post('/admin/barangmasuk/update', 'App\Http\Controllers\BarangmasukPageController@update');
-Route::get('/admin/barangmasuk/hapus/{id}', 'App\Http\Controllers\BarangmasukPageController@hapus');
+Route::get('/admin/asetmasuk', 'App\Http\Controllers\AsetmasukPageController@home');
+Route::get('/admin/asetmasuk/tambah', 'App\Http\Controllers\AsetmasukPageController@tambah');
+Route::post('/admin/asetmasuk/tambah', 'App\Http\Controllers\AsetmasukPageController@simpan');
+Route::get('/admin/asetmasuk/ubah/{id}', 'App\Http\Controllers\AsetmasukPageController@ubah');
+Route::post('/admin/asetmasuk/update', 'App\Http\Controllers\AsetmasukPageController@update');
+Route::get('/admin/asetmasuk/hapus/{id}', 'App\Http\Controllers\AsetmasukPageController@hapus');
 
 // riwayat Inventory data dari barang masuk
 Route::get('/admin/riwayat-inventory', 'App\Http\Controllers\RiwayatinventoryPageController@home');

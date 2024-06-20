@@ -3,17 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Barangmasuks;
+use App\Models\Asets;
 
-class BarangmasukPageController extends Controller
+class AsetPageController extends Controller
 {
     // Landing Page
     public function index()
     {
-        //$Barangmasuk = Barangmasuk::latest()->paginate(5);
-        $barangmasuk = "Barang masuk";
+        //$aset = aset::latest()->paginate(5);
+        $aset = "Aset";
         $header = false;
-        return view('barangmasuk.index', compact('barangmasuk','header'));
+        return view('aset.index', compact('aset','header'));
+        //return view('landingpage.layout');
+    }
+
+    public function stockopname()
+    {
+        //$aset = aset::latest()->paginate(5);
+        $toptitle = " Tambah Riwayat Peminjaman";;
+        $aset = "aset";
+        $header = false;
+        return view('aset.stockopname', compact('aset','header','toptitle'));
         //return view('landingpage.layout');
     }
 
@@ -23,18 +33,21 @@ class BarangmasukPageController extends Controller
     public function home()
     {
 
-        $toptitle = "Dashboard - Barangmasuk";
+        $toptitle = "Dashboard - aset";
         $header = false;
-        //$Barangmasuks = Barangmasuks::latest()->paginate(5);
-        return view('barangmasuk.tabel', compact('header','toptitle'));
+        //$asets = asets::latest()->paginate(5);
+        return view('aset.tabel', compact('header','toptitle'));
         //return view('landingpage.layout');
     }
 
     public function tambah()
     {
-        $toptitle = "Tambah Data Barang masuk";
+        //$products = Product::latest()->paginate(5);
+        //$aset = aset::latest()->paginate(5);
+        //$kegiatan = Kegiatan::latest()->paginate(5);
+        $toptitle = "NOBEL INDONESIA :. Tambah Data aset";
         $header = false;
-        return view('barangmasuk.tambah', compact('header','toptitle'));
+        return view('aset.tambah', compact('header','toptitle'));
         //return view('landingpage.layout');
     }
 
@@ -50,13 +63,13 @@ class BarangmasukPageController extends Controller
         //upload gambar
         $gambar = $request->gambar;
         $namafile = time()."_".$gambar->getClientOriginalName();
-        $tujuan_upload = 'images/Barangmasuk';
+        $tujuan_upload = 'images/aset';
         $gambar->move($tujuan_upload,$namafile);
 
         $judulnya = $request->judul;
         //SlugService::createSlug(Post::class, 'slug', $post->title);
 
-        Barangmasuks::create([
+        asets::create([
             'judul' => $request->judul,
             'slug' => $request->judul,
             'deskripsi' => $request->deskripsi,
@@ -64,7 +77,7 @@ class BarangmasukPageController extends Controller
         ]);
 
         if($gambar){
-            return redirect('admin/barangmasuk')->with('success','Data berhasil disimpan');
+            return redirect('admin/aset')->with('success','Data berhasil disimpan');
         }
         else{
             return redirect()->back()->withInput()->withErrors($request->all())->with('error','Data gagal disimpan, cek kembali form anda');
@@ -74,9 +87,9 @@ class BarangmasukPageController extends Controller
 
     public function ubah($id)
     {
-        $Barangmasuks = Barangmasuks::find($id);
-        $toptitle = "Ubah Data Barangmasuk";
-        return view('barangmasuk.ubah', ['dataubah' => $Barangmasuks,'toptitle' => $toptitle]);
+        $asets = asets::find($id);
+        $toptitle = "NOBEL INDONESIA :. Ubah Data aset";
+        return view('aset.ubah', ['dataubah' => $asets,'toptitle' => $toptitle]);
     }
 
 
@@ -89,37 +102,37 @@ class BarangmasukPageController extends Controller
         ]);
 
         $id = $request->id;
-        $Barangmasuks = Barangmasuks::find($id);
+        $asets = asets::find($id);
         $gambar = $request->gambar;
         if($gambar){
             $namafile = time()."_".$gambar->getClientOriginalName();
-            $tujuan_upload = 'images/barang';
+            $tujuan_upload = 'images/aset';
             $gambar->move($tujuan_upload,$namafile);
         }
         else{
-            $namafile = $Barangmasuks->gambar;
+            $namafile = $asets->gambar;
         }
 
-        Barangmasuks::whereId($id)->update([
+        asets::whereId($id)->update([
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
             'gambar' => $namafile
         ]);
 
-        return redirect('admin/barangmasuk')->with('success','Data berhasil diubah');
+        return redirect('admin/aset')->with('success','Data berhasil diubah');
     }
 
 
     public function hapus($id)
     {
-        $Barangmasuks = Barangmasuks::find($id);
-        $namafile = $Barangmasuks->gambar;
-        File::delete('/images/barang/'.$namafile);
-        if($Barangmasuks->delete()){
-            return redirect('admin/barangmasuk')->with('success','Data berhasil dihapus');
+        $asets = asets::find($id);
+        $namafile = $asets->gambar;
+        File::delete('/images/aset/'.$namafile);
+        if($asets->delete()){
+            return redirect('admin/aset')->with('success','Data berhasil dihapus');
         }
         else{
-            return redirect('admin/barangmasuk')->with('error','Data gagal dihapus');
+            return redirect('admin/aset')->with('error','Data gagal dihapus');
         }
     }
 }

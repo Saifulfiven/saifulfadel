@@ -5,18 +5,18 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
 <?php
     $data = [
-        ['kode_barang' => 'BRG001A','sejak_tanggal' => '2021-01-01', 'kembali_tanggal' => '2021-01-15', 'penanggungjawab' => 'Saiful', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Rusak', 'keterangan' => ''],
-        ['kode_barang' => 'BRG001B','sejak_tanggal' => '2021-01-10', 'kembali_tanggal' => '2021-01-20', 'penanggungjawab' => 'Arapat', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki mesin'],
-        ['kode_barang' => 'BRG001C','sejak_tanggal' => '2021-02-01', 'kembali_tanggal' => '2021-02-15', 'penanggungjawab' => 'Hairsan', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
-        ['kode_barang' => 'BRG001D','sejak_tanggal' => '2021-02-10', 'kembali_tanggal' => '', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Rusak', 'keterangan' => 'Mengganti bahan'],
-        ['kode_barang' => 'BRG001E','sejak_tanggal' => '2021-03-01', 'kembali_tanggal' => '2021-03-15', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Melakukan perbaikan'],
-        ['kode_barang' => 'BRG001F','sejak_tanggal' => '2021-03-10', 'kembali_tanggal' => '2021-03-20', 'penanggungjawab' => 'Olivia', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
-        ['kode_barang' => 'BRG001G','sejak_tanggal' => '2021-04-01', 'kembali_tanggal' => '2021-04-15', 'penanggungjawab' => 'Andi Haedar', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki koneksi'],
-        ['kode_barang' => 'BRG001H','sejak_tanggal' => '2021-04-10', 'kembali_tanggal' => '2021-04-20', 'penanggungjawab' => 'Andi Haedar', 'kondisisebelum' => 'Rusak', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
-        ['kode_barang' => 'BRG001I','sejak_tanggal' => '2021-05-01', 'kembali_tanggal' => '2021-05-15', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki pengaturan'],
-        ['kode_barang' => 'BRG001J','sejak_tanggal' => '2021-05-10', 'kembali_tanggal' => '2021-05-20', 'penanggungjawab' => '', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Buruk', 'keterangan' => ''],
-        ['kode_barang' => 'BRG001K','sejak_tanggal' => '2021-06-01', 'kembali_tanggal' => '2021-06-15', 'penanggungjawab' => 'Faril Syukur', 'kondisisebelum' => 'Rusak', 'kondisisesudah' => 'Baik', 'keterangan' => 'Mengganti baterai'],
-        ['kode_barang' => 'BRG001L','sejak_tanggal' => '2021-06-10', 'kembali_tanggal' => '2021-06-20', 'penanggungjawab' => 'Arapat', 'kondisisebelum' => 'Baik', 'kondisisesudah' => '', 'keterangan' => '']
+        ['kode_aset' => 'BRG001A','sejak_tanggal' => '2021-01-01', 'kembali_tanggal' => '2021-01-15', 'penanggungjawab' => 'Saiful', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Rusak', 'keterangan' => ''],
+        ['kode_aset' => 'BRG001B','sejak_tanggal' => '2021-01-10', 'kembali_tanggal' => '2021-01-20', 'penanggungjawab' => 'Arapat', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki mesin'],
+        ['kode_aset' => 'BRG001C','sejak_tanggal' => '2021-02-01', 'kembali_tanggal' => '2021-02-15', 'penanggungjawab' => 'Hairsan', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
+        ['kode_aset' => 'BRG001D','sejak_tanggal' => '2021-02-10', 'kembali_tanggal' => '', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Rusak', 'keterangan' => 'Mengganti bahan'],
+        ['kode_aset' => 'BRG001E','sejak_tanggal' => '2021-03-01', 'kembali_tanggal' => '2021-03-15', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Melakukan perbaikan'],
+        ['kode_aset' => 'BRG001F','sejak_tanggal' => '2021-03-10', 'kembali_tanggal' => '2021-03-20', 'penanggungjawab' => 'Olivia', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
+        ['kode_aset' => 'BRG001G','sejak_tanggal' => '2021-04-01', 'kembali_tanggal' => '2021-04-15', 'penanggungjawab' => 'Andi Haedar', 'kondisisebelum' => 'Buruk', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki koneksi'],
+        ['kode_aset' => 'BRG001H','sejak_tanggal' => '2021-04-10', 'kembali_tanggal' => '2021-04-20', 'penanggungjawab' => 'Andi Haedar', 'kondisisebelum' => 'Rusak', 'kondisisesudah' => 'Baik', 'keterangan' => ''],
+        ['kode_aset' => 'BRG001I','sejak_tanggal' => '2021-05-01', 'kembali_tanggal' => '2021-05-15', 'penanggungjawab' => 'Fandi Ibrahim', 'kondisisebelum' => 'Baik', 'kondisisesudah' => 'Lumayan', 'keterangan' => 'Memperbaiki pengaturan'],
+        ['kode_aset' => 'BRG001J','sejak_tanggal' => '2021-05-10', 'kembali_tanggal' => '2021-05-20', 'penanggungjawab' => '', 'kondisisebelum' => 'Lumayan', 'kondisisesudah' => 'Buruk', 'keterangan' => ''],
+        ['kode_aset' => 'BRG001K','sejak_tanggal' => '2021-06-01', 'kembali_tanggal' => '2021-06-15', 'penanggungjawab' => 'Faril Syukur', 'kondisisebelum' => 'Rusak', 'kondisisesudah' => 'Baik', 'keterangan' => 'Mengganti baterai'],
+        ['kode_aset' => 'BRG001L','sejak_tanggal' => '2021-06-10', 'kembali_tanggal' => '2021-06-20', 'penanggungjawab' => 'Arapat', 'kondisisebelum' => 'Baik', 'kondisisesudah' => '', 'keterangan' => '']
     ];
 ?>
 
@@ -42,23 +42,23 @@
                     <div class="col-md-5 border border-primary rounded p-4 bg-white" style="box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
                         <div style="display: flex; justify-content: space-between;">
                             <div>
-                                <h4> Data Barang </h4>
+                                <h4> Data Aset </h4>
                             </div>
                             <div>
-                                <a href="/admin/barang/tambah" class="btn btn-primary">Tambah</a>
+                                <a href="/admin/aset/tambah" class="btn btn-primary">Tambah</a>
                             </div>
                         </div>                        
 
                         <table>
-                        <tr style="font-weight: bold"><td> Nama Barang </td><td> : </td><td>  Laptop </td></tr>
-                        <tr><td> Kode Barang </td><td> : </td><td>  BRG001</td></tr>
+                        <tr style="font-weight: bold"><td> Nama Aset </td><td> : </td><td>  Laptop </td></tr>
+                        <tr><td> Kode Aset </td><td> : </td><td>  BRG001</td></tr>
                         <tr><td> Jumlah </td><td> : </td><td>  10</td></tr>
                         <tr><td> Kategori </td><td> : </td><td>  Elektronik</td></tr>
 
                         </table>
                         <br>
                         
-                            <img id="preview-image" src="/images/barang/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
+                            <img id="preview-image" src="/images/aset/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
                         
                         
                         <button type="button" class="btn btn-primary" onclick="toggleContent('representsinger')">Riwayat Inventory</button>
@@ -90,7 +90,7 @@
                         <form>
 
                         <div class="form-group">
-                                <label for="exampleInputPassword1">Pilih Barang</label>
+                                <label for="exampleInputPassword1">Pilih aset</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
                                     <option value="1">BRG001A</option>
                                     <option value="2">BRG001B</option>
@@ -155,7 +155,7 @@
                     </div>
                     <div id="representsinger" class="col-md-12 border border-primary rounded p-4 bg-white "
                     style="box-shadow: 0px 0px 10px rgba(0,0,0,0.2);margin-top:20px;margin-left:-10px;display: none; transition: all 0.5s ease-in-out;">
-                   <h5>Riwayat Inventory</h5>
+                   <h5>Riwayat Aset</h5>
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0" id="tabel-data">
                         <thead>
@@ -175,7 +175,7 @@
                             <?php $no = 1;foreach($data as $d) : ?>
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{$d['kode_barang']}} </td>
+                                    <td>{{$d['kode_aset']}} </td>
                                     <td>{{$d['sejak_tanggal']}} </td>
                                     <td>{{$d['kembali_tanggal']}} </td>
                                     <td>{{$d['penanggungjawab']}} </td>

@@ -22,7 +22,7 @@
             @endif
 
             <div class="card-header pb-0 position-relative mb-5">
-              <h6>Data Riwayat Inventory</h6>
+              <h6>Data Riwayat Aset</h6>
               </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -79,7 +79,7 @@
                         <td>{{ $item['kode'] }}</td>
                         <td>{{ $item['tipe'] }}</td>
                         <td class="text-center">
-                            <a href="{{ url('admin/riwayat-inventory/lihat') }}" class="btn btn-sm btn-primary">Riwayat Inventory</a>
+                            <a href="{{ url('admin/riwayat-Aset/lihat') }}" class="btn btn-sm btn-primary">Riwayat Aset</a>
                         </td>
                     </tr>
                     @endforeach

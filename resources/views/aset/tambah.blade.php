@@ -16,11 +16,11 @@
             @endif
             <div class="card">
                 <div class="card-header d-flex justify-content-between bg-primary text-white">
-                    <strong>Tambah Barang</strong>
-                    <a href="/admin/barang" class="btn btn-sm btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
+                    <strong>Tambah Aset</strong>
+                    <a href="/admin/aset" class="btn btn-sm btn-primary"><i class="fas fa-arrow-left"></i> Kembali</a>
                 </div>
                 <div class="card-body">
-                    <form action="/admin/barang/tambah" method="post" enctype="multipart/form-data">
+                    <form action="/admin/aset/tambah" method="post" enctype="multipart/form-data">
                         @csrf
                     <div class="row">
                         <div class="col-md-6 border border-primary shadow" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.3);">
@@ -28,12 +28,12 @@
                         <strong>Informasi</strong>
                             <hr style="border-color: purple;border:2px">
                             <div class="form-group">
-                                    <label for="judul" class="col-sm-4 col-form-label">Nama Barang</label>
+                                    <label for="judul" class="col-sm-4 col-form-label">Nama aset</label>
                                     <input type="text" name="judul" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="judul" class="col-sm-4 col-form-label">Kode Barang</label>
-                                    <input type="text" name="kodebarang" class="form-control" required>
+                                    <label for="judul" class="col-sm-4 col-form-label">Kode aset</label>
+                                    <input type="text" name="kodeaset" class="form-control" required>
 
                                 </div>
                                 <div class="form-group">
@@ -59,7 +59,7 @@
 
                             <hr style="border-color: purple;border:2px">
                         <div class="col-md-6">
-                                <img id="preview-image" src="/images/barang/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
+                                <img id="preview-image" src="/images/aset/laptop.jpg" alt="Placeholder" class="img-thumbnail" style="max-height: 500px;">
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
