@@ -68,11 +68,11 @@ Route::get('/admin/asetmasuk/hapus/{id}', 'App\Http\Controllers\AsetmasukPageCon
 // riwayat Inventory data dari barang masuk
 Route::get('/admin/riwayat-aset', 'App\Http\Controllers\RiwayatinventoryPageController@home');
 Route::get('/admin/riwayat-aset/tambah', 'App\Http\Controllers\RiwayatinventoryPageController@tambah');
-Route::post('/admin/riwayat-aset/tambah', 'App\Http\Controllers\riwayatinventoryPageController@simpan');
-Route::get('/admin/riwayat-aset/ubah/{id}', 'App\Http\Controllers\riwayatinventoryPageController@ubah');
-Route::get('/admin/riwayat-aset/lihat', 'App\Http\Controllers\riwayatinventoryPageController@lihat');
-Route::post('/admin/riwayat-aset/update', 'App\Http\Controllers\riwayatinventoryPageController@update');
-Route::get('/admin/riwayat-aset/hapus/{id}', 'App\Http\Controllers\riwayatinventoryPageController@hapus');
+Route::post('/admin/riwayat-aset/tambah', 'App\Http\Controllers\RiwayatinventoryPageController@simpan');
+Route::get('/admin/riwayat-aset/ubah/{id}', 'App\Http\Controllers\RiwayatinventoryPageController@ubah');
+Route::get('/admin/riwayat-aset/lihat', 'App\Http\Controllers\RiwayatinventoryPageController@lihat');
+Route::post('/admin/riwayat-aset/update', 'App\Http\Controllers\RiwayatinventoryPageController@update');
+Route::get('/admin/riwayat-aset/hapus/{id}', 'App\Http\Controllers\RiwayatinventoryPageController@hapus');
 
 Route::get('/admin/kendaraan/', 'App\Http\Controllers\KendaraanPageController@index');
 Route::get('/admin/kendaraan/tambah', 'App\Http\Controllers\KendaraanPageController@tambah');
