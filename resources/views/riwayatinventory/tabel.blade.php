@@ -79,7 +79,7 @@
                         <td>{{ $item['kode'] }}</td>
                         <td>{{ $item['tipe'] }}</td>
                         <td class="text-center">
-                            <a href="{{ url('admin/riwayat-Aset/lihat') }}" class="btn btn-sm btn-primary">Riwayat Aset</a>
+                            <a href="{{ url('admin/riwayat-aset/lihat') }}" class="btn btn-sm btn-primary">Riwayat Aset</a>
                         </td>
                     </tr>
                     @endforeach
