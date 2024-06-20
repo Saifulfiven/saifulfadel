@@ -58,6 +58,15 @@
                                         </select>
                                     </div> 
 
+                                    <div class="form-group">
+                                        <label for="judul" class="col-sm-4 col-form-label">Lokasi</label>
+                                        <select name="lokasi" class="form-control" required>
+                                            <option value="sekolah">Sekolah</option>
+                                            <option value="hotel">Hotel</option>
+                                            <option value="aula">Aula</option>
+                                        </select>
+                                    </div> 
+
 
                                     <div class="form-group">
                                         <button class="btn btn-primary">Update</button>
@@ -115,6 +124,15 @@
                                             @foreach ($merk as $index => $item)
                                                 <option value="{{ $item['id'] }}">{{ $item['nama'] }}</option>
                                             @endforeach
+                                        </select>
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <label for="judul" class="col-sm-4 col-form-label">Lokasi</label>
+                                        <select name="lokasi" class="form-control" required>
+                                            <option value="sekolah">Sekolah</option>
+                                            <option value="hotel">Hotel</option>
+                                            <option value="aula">Aula</option>
                                         </select>
                                     </div> 
 
