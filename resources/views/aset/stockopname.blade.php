@@ -89,9 +89,8 @@
                         <td>2020-06-03</td>
                         <td>2021-04-04</td>
                         <td class="text-center">
-                        @if($item['jumlah'] < $item['jumlahSekarang'])
                             <a href='/admin/asetmasuk/tambah' class="btn btn-sm btn-primary">Tambah</a>
-                        @endif
+                        
                         </td>
                     </tr>
                     @endforeach
