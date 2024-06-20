@@ -136,7 +136,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Logout</span>
+            <span class="nav-link-text ms-1">Logout User</span>
           </a>
         </li>
       </ul>
