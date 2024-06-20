@@ -24,10 +24,10 @@
               </a>
             </div>
             <div class="card-profile-data">
-              <h6 class="mb-0">Administrator</h6>
+              <h6 class="mb-0">Faril</h6>
               
               <p class="mb-0">
-                Nama Lengkap: Admin
+                Nama Lengkap: Faril Syukur
               </p>
               <p class="mb-0">
                 Jabatan : Admin
@@ -36,7 +36,7 @@
           </div>
 
           <div class="col-md-12 mt-4">
-            <button class="btn btn-primary" onclick="toggleForm()">Tambah Data</button>
+            <button class="btn btn-primary" onclick="toggleForm()">Tambah Data User</button>
          
           
           <div class="d-none" id="formInput">
