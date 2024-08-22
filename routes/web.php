@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\TracerStudyPageController;
 use \App\Http\Controllers\LoginPageController;
-
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,74 +17,69 @@ use \App\Http\Controllers\LoginPageController;
 */
 
 
-Route::get('/', 'App\Http\Controllers\LoginPageController@index')->name('landingpage');
+Route::get('/', 'App\Http\Controllers\LandingPageController@index')->name('landingpage');
+Route::get('/detailproduk/{slug}', 'App\Http\Controllers\LandingPageController@detailproduk')->where('slug', '[a-z0-9\-]+');
+Route::get('/semua-produk', 'App\Http\Controllers\LandingPageController@semuaproduk')->name('semua-produk');
+Route::get('/hubungi-kami', 'App\Http\Controllers\LandingPageController@hubungikami')->name('hubungi-kami');
+
 //Controller LoginPageController
 Route::get('/login', 'App\Http\Controllers\LoginPageController@index')->name('login');
 Route::post('/login', 'App\Http\Controllers\LoginPageController@authenticate')->name('login');
-Route::get('/admin/logout', 'App\Http\Controllers\LoginPageController@actionlogout')->name('logout');
+Route::get('/logout', 'App\Http\Controllers\LoginPageController@actionlogout')->name('logout');
 
 //REGISTER
-Route::get('register', [LoginPageController::class, 'register'])->name('register');
-Route::post('register/action', [LoginPageController::class, 'actionregister'])->name('actionregister');
+Route::get('daftar', [LoginPageController::class, 'register'])->name('daftar');
+Route::post('daftar', [LoginPageController::class, 'daftarPengguna'])->name('aksidaftar');
+
 //Route::get('/landingpage', [LandingPageController::class, 'index']);
 
 //Controller DashboaedPageController
 Route::get('/dashboard', 'App\Http\Controllers\DashboardPageController@index');
 
-//CRUD ACARA Admin
+//Master DASHBOARD
+//Produk Masuk
+Route::get('/admin/produk', 'App\Http\Controllers\ProdukPageController@home');
+Route::get('/admin/produk/tambah', 'App\Http\Controllers\ProdukPageController@tambah');
+Route::post('/admin/produk/tambah', 'App\Http\Controllers\ProdukPageController@simpan');
+Route::get('/admin/produk/ubah/{id}', 'App\Http\Controllers\ProdukPageController@ubahproduk');
+Route::post('/admin/produk/ubah/{id}', 'App\Http\Controllers\ProdukPageController@updateproduk');
+Route::get('/admin/produk/hapus/{id}', 'App\Http\Controllers\ProdukPageController@hapus');
 
-Route::get('/admin/acara', 'App\Http\Controllers\AcaraPageController@index');
-Route::get('/admin/acara/tambah', 'App\Http\Controllers\AcaraPageController@tambah');
-Route::post('/admin/acara/tambah', 'App\Http\Controllers\AcaraPageController@simpan');
-Route::get('/admin/acara/ubah/{id}', 'App\Http\Controllers\AcaraPageController@ubah');
-Route::post('/admin/acara/update', 'App\Http\Controllers\AcaraPageController@update');
-Route::get('/admin/acara/hapus/{id}', 'App\Http\Controllers\AcaraPageController@hapus');
-//Kategori
+//penjualan Masuk
+Route::get('/admin/penjualan', 'App\Http\Controllers\PenjualanDashboardController@index');
+Route::get('/admin/penjualan/detail/{kodeorder}', 'App\Http\Controllers\PenjualanDashboardController@detail');
+Route::post('/admin/penjualan/tambah', 'App\Http\Controllers\PenjualanDashboardController@simpan');
+Route::get('/admin/penjualan/ubah/{id}', 'App\Http\Controllers\PenjualanDashboardController@ubahpenjualan');
+Route::post('/admin/penjualan/ubah/{id}', 'App\Http\Controllers\PenjualanDashboardController@updatepenjualan');
+Route::get('/admin/penjualan/hapus/{id}', 'App\Http\Controllers\PenjualanDashboardController@hapus');
+Route::post('/admin/penjualan/updatestatuspengerjaan/{id}', 'App\Http\Controllers\PenjualanDashboardController@updatestatuspengerjaan');
+Route::post('/admin/penjualan/updatestatus/{id}', 'App\Http\Controllers\PenjualanDashboardController@updatestatusorder');
 
 //Master kategori
-Route::get('/admin/kategori', 'App\Http\Controllers\KategoriPageController@index');
-Route::get('/admin/kategori/tambah', 'App\Http\Controllers\KategoriPageController@tambah');
-Route::post('/admin/kategori/tambah', 'App\Http\Controllers\KategoriPageController@simpan');
-Route::get('/admin/kategori/ubah/{id}', 'App\Http\Controllers\KategoriPageController@ubah');
-Route::post('/admin/kategori/update', 'App\Http\Controllers\KategoriPageController@update');
-Route::get('/admin/kategori/hapus/{id}', 'App\Http\Controllers\KategoriPageController@hapus');
-
-//Master Barang
-Route::get('/admin/aset', 'App\Http\Controllers\AsetPageController@home');
-Route::get('/admin/stockopname', 'App\Http\Controllers\AsetPageController@stockopname');
-Route::get('/admin/aset/tambah', 'App\Http\Controllers\AsetPageController@tambah');
-Route::post('/admin/aset/tambah', 'App\Http\Controllers\AsetPageController@simpan');
-Route::get('/admin/aset/ubah/{id}', 'App\Http\Controllers\AsetPageController@ubah');
-Route::post('/admin/aset/update', 'App\Http\Controllers\AsetPageController@update');
-Route::get('/admin/aset/hapus/{id}', 'App\Http\Controllers\AsetPageController@hapus');
-
-//Barang Masuk
-Route::get('/admin/asetmasuk', 'App\Http\Controllers\AsetmasukPageController@home');
-Route::get('/admin/asetmasuk/tambah', 'App\Http\Controllers\AsetmasukPageController@tambah');
-Route::post('/admin/asetmasuk/tambah', 'App\Http\Controllers\AsetmasukPageController@simpan');
-Route::get('/admin/asetmasuk/ubah/{id}', 'App\Http\Controllers\AsetmasukPageController@ubah');
-Route::post('/admin/asetmasuk/update', 'App\Http\Controllers\AsetmasukPageController@update');
-Route::get('/admin/asetmasuk/hapus/{id}', 'App\Http\Controllers\AsetmasukPageController@hapus');
-
-// riwayat Inventory data dari barang masuk
-Route::get('/admin/riwayat-aset', 'App\Http\Controllers\RiwayatinventoryPageController@home');
-Route::get('/admin/riwayat-aset/tambah', 'App\Http\Controllers\RiwayatinventoryPageController@tambah');
-Route::post('/admin/riwayat-aset/tambah', 'App\Http\Controllers\RiwayatinventoryPageController@simpan');
-Route::get('/admin/riwayat-aset/ubah/{id}', 'App\Http\Controllers\RiwayatinventoryPageController@ubah');
-Route::get('/admin/riwayat-aset/lihat', 'App\Http\Controllers\RiwayatinventoryPageController@lihat');
-Route::post('/admin/riwayat-aset/update', 'App\Http\Controllers\RiwayatinventoryPageController@update');
-Route::get('/admin/riwayat-aset/hapus/{id}', 'App\Http\Controllers\RiwayatinventoryPageController@hapus');
-
-Route::get('/admin/kendaraan/', 'App\Http\Controllers\KendaraanPageController@index');
-Route::get('/admin/kendaraan/tambah', 'App\Http\Controllers\KendaraanPageController@tambah');
-Route::post('/admin/kendaraan/tambah', 'App\Http\Controllers\KendaraanPageController@simpan');
-Route::get('/admin/kendaraan/edit-riwayat/', 'App\Http\Controllers\KendaraanPageController@editriwayat');
-Route::post('/admin/kendaraan/update', 'App\Http\Controllers\KendaraanPageController@update');
-Route::get('/admin/kendaraan/hapus/{id}', 'App\Http\Controllers\KendaraanPageController@hapus');
+Route::get('/admin/kategori/', 'App\Http\Controllers\ProdukPageController@tambahkategori');
+Route::post('/admin/kategori/', 'App\Http\Controllers\ProdukPageController@simpankategori');
+Route::get('/admin/kategori/{id}', 'App\Http\Controllers\ProdukPageController@ubahkategori');
+Route::post('/admin/kategori/update', 'App\Http\Controllers\ProdukPageController@updatekategori');
+Route::get('/admin/kategori/hapus/{id}', 'App\Http\Controllers\ProdukPageController@hapuskategori');
 
 
-Route::get('/admin/dashboard/', 'App\Http\Controllers\DashboardPageController@index');
+// Login Master
+Route::get('/master-login', 'App\Http\Controllers\LoginPageController@loginmaster')->name('login');
+Route::post('/master-login', 'App\Http\Controllers\LoginPageController@authenticatemaster')->name('login');
 
-Route::get('/admin/alumni', 'App\Http\Controllers\AlumniPageController@index');
+//Product
+Route::resource('products', ProductController::class);
 
-//tambahkan masing masing dalam array yaitu jumlah, jumlah sekarang, perbandingan kedua jumlah dan menjadi status jika lebih kecil maka status berwarna merah, dan jika lebih besar maka berwarna hijau
+//Cart Controller
+Route::get('cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('cart', [CartController::class, 'store'])->name('cart.store');
+Route::patch('cart/{rowId}', [CartController::class, 'update'])->name('cart.update');
+Route::delete('cart/{rowId}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+//Selesai Pembelian
+Route::get('/selesaipembelian', 'App\Http\Controllers\PenjualanPageController@simpanPenjualan')->name('selesaipembelian');
+Route::get('/pesanpenjualan', 'App\Http\Controllers\PenjualanPageController@pesanpenjualan')->name('pesanpenjualan');
+Route::get('/riwayatorder', 'App\Http\Controllers\PenjualanPageController@riwayatorder')->name('riwayatorder');
+Route::get('/riwayatorder/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@detail');
+Route::get('/pembayaran/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@pembayaran')->name('pembayaran');
+Route::post('/pembayaran/{kodeorder}', 'App\Http\Controllers\PenjualanPageController@pembayaranselesai')->name('pembayaranselesai');

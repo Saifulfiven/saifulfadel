@@ -1,172 +1,138 @@
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
-            <div class="container py-5">
-                <div class="row g-4 footer-inner">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-white fw-bold mb-4">About Nobel.</h4>
-                            <p>Nostrud exertation ullamco labor nisi aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-                            <p class="mb-0"><a class="" href="#">Nobel Institute </a> &copy; 2024 All Right Reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-white fw-bold mb-4">Usefull Link</h4>
-                            <div class="d-flex flex-column align-items-start">
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>About Us</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Contact Us</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Our Services</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Terms & Condition</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-white fw-bold mb-4">Services Link</h4>
-                            <div class="d-flex flex-column align-items-start">
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Apartment Cleaning</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Office Cleaning</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Car Washing</a>
-                                <a class="btn btn-link ps-0" href=""><i class="fa fa-check me-2"></i>Green Cleaning</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-white fw-bold mb-4">Contact Us</h4>
-                            <a href="" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>123 Street, CA, USA</a>
-                            <a href="" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</a>
-                            <a href="" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>info@example.com</a>
-                        </div>
+
+    <!-- Start Footer -->
+    <footer id="tempaltemo_footer">
+        <hr>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 pb-3 logo" style="background: linear-gradient(to right, #00b0ff, #0000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fadel Printing</h2>
+                    <ul class="list-unstyled footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            JL AP Pettarani, Komplek Bisnis Centre III, 
+                            Blk. B No.5, Masale, Kec. Panakkukang,
+                             Kota Makassar, Sulawesi Selatan 90231
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">082291938794</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">admin@faderprinting.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 pb-3">Kategori Produk</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Stiker</a></li>
+                        <li><a class="text-decoration-none" href="#">Brosur</a></li>
+                        <li><a class="text-decoration-none" href="#">Poster</a></li>
+                        <li><a class="text-decoration-none" href="#">Merchandise</a></li>
+                        <li><a class="text-decoration-none" href="#">Kartu Nama</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 pb-3">Link</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="/">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Kenali Kami</a></li>
+                        <li><a class="text-decoration-none" href="#">Google Maps</a></li>
+                        <li><a class="text-decoration-none" href="/hubungi-kami">Hubungi Kami</a></li>
+                        <li><a class="text-decoration-none" href="/login">login</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control border-light" id="subscribeEmail" placeholder="Email address">
+                        <div class="input-group-text btn-primary text-light">Subscribe</div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
-
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
+        <div class="w-100 py-3">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                        <img src="img/logo-footer.png" class="img-fluid w-100 rounded-top" style="width:100%" alt="">
-                    </div>
-                    <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
-                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-md-4 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">IT Programmer</a>
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left">
+                            Copyright &copy; 2024 Fadel Printing
+                            | Designed by <a rel="sponsored" href="https://storynikah.com" target="_blank">Fiventech</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
-        
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+    </footer>
+    <!-- End Footer -->
 
-    </div>
-    </div>
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ asset('/lib/wow/wow.min.js') }}"></script>
-        <script src="{{ asset('/lib/easing/easing.min.js') }}"></script>
-        <script src="{{ asset('/lib/waypoints/waypoints.min.js') }}"></script>
-        <script src="{{ asset('/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <!-- Start Script -->
+    <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/templatemo.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 
-        <!-- Template Javascript -->
-        <script src="{{ asset('/js/main.js') }}"></script>
-    
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script>
-$(document).ready(function(){
-    $('#filter-provinsi').on('change', function(){
-    let id_provinsi = $(this).val();
-    if(id_provinsi){
-        jQuery.ajax({
-        url: '/searchkabupaten',
-        type: "post",
-        data: { 
-            _token: "{{ csrf_token() }}",
-            id_provinsi: id_provinsi 
-        },
-        success: function(res){
-            console.log(res);
-            $('#filter-kabupaten').empty();
-            $('#filter-kabupaten').append('<option value="" selected>Pilih Kabupaten</option>');
-            res.forEach(function(objek, indeks) {
-                console.log("Objek ke-" + (indeks + 1) + ":");
-                console.log(objek.id);console.log(objek.name);
-                $('#filter-kabupaten').append('<option value="'+ objek.id +'">'+ objek.name +'</option>');
-            });
-        }
-    });
-    }else{
-        $('#filter-kabupaten').empty();
-    }
-});
-
-
-
-function xtoggleOther(empat_7,empat_lainnya){
-    var inp = document.getElementById(empat_lainnya);
-    if(empat_7.checked){
-        inp.style.display = "block";
-        inp.style.opacity = 0;
-        inp.style.transition = "opacity 1s";
-        requestAnimationFrame(function(){
-            inp.style.opacity = 1;
+    <!-- Start Slider Script -->
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                }
+            ]
         });
-    }else{
-        inp.style.opacity = 1;
-        inp.style.transition = "opacity 1s";
-        requestAnimationFrame(function(){
-            inp.style.opacity = 0;
-            requestAnimationFrame(function(){
-                inp.style.display = "none";
-            });
-        });
-    }
+    </script>
+    <!-- End Script -->
+</body>
 
-}
-toggleOthers(document.getElementById('empat_7'),'empat_lainnya');
-
-
-function toggleOthertiga(dicheck,lainnya){
-    var inp = document.getElementById(lainnya);
-    if(dicheck.checked){
-        inp.style.display = "block";
-        inp.style.opacity = 0;
-        inp.style.transition = "opacity 1s";
-        requestAnimationFrame(function(){
-            inp.style.opacity = 1;
-        });
-    }else{
-        inp.style.opacity = 1;
-        inp.style.transition = "opacity 1s";
-        requestAnimationFrame(function(){
-            inp.style.opacity = 0;
-            requestAnimationFrame(function(){
-                inp.style.display = "none";
-            });
-        });
-    }
-
-}
-toggleOthertiga (document.getElementById('dicheck'),'lainnya');
-});
-
-</script>
-<!-- <script src="{{ asset('/js/togledropdown.js') }}"></script> -->
+</html>

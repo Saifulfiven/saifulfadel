@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-Nobel Indonesia
+Login Fadel Print
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -39,14 +39,14 @@ Nobel Indonesia
 </head>
 
 <body class="">
-  <div class="container position-sticky z-index-sticky top-0">
+  <div class="container position-sticky z-index-sticky top-0 mt-0">
     <div class="row">
       <div class="col-12">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+        <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute start-0 end-0 mx-4">
           <div class="container-fluid pe-0">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="/login">
-              Nobel Indonesia
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="/">
+              Fadel Printing
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
@@ -59,7 +59,7 @@ Nobel Indonesia
               <ul class="navbar-nav mx-auto ms-xl-auto me-xl-7">
                 
               <li class="nav-item">
-                  <a class="nav-link me-2" href="/register">
+                  <a class="nav-link me-2" href="/daftar">
                     <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
                     Daftar
                   </a>
@@ -79,6 +79,7 @@ Nobel Indonesia
       </div>
     </div>
   </div>
+  
   <main class="main-content  mt-0">
     <section>
       <div class="page-header min-vh-75">
@@ -87,34 +88,65 @@ Nobel Indonesia
             <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
               <div class="card card-plain mt-8">
                 <div class="card-header pb-0 text-left bg-transparent">
-                  <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
-                  <p class="mb-0">Enter your email and password to sign in</p>
+                  <h3 class="font-weight-bolder text-info text-gradient">Fadel Printing</h3>
+                  <p class="mb-0">Daftar / Register</p>
+                    
+                    @if(session('error'))
+                        <div class="alert alert-danger">
+                            {{session('error')}}
+                        </div>
+                    @endif
+
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{session('success')}}
+                        </div>
+                    @endif
+                    
                 </div>
                 <div class="card-body">
                     
-                <form action="{{route('actionregister')}}" method="post">
+                <form action="{{route('daftar')}}" method="post">
             @csrf
                 <div class="form-group">
-                    <label><i class="fa fa-envelope"></i> Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                    <label><i class="fa fa-envelope"></i> Nama Lengkap</label>
+                    <input type="text" name="namalengkap" class="form-control" required="">
                 </div>
+                <div class="form-group">
+                    <label><i class="fa fa-envelope"></i> No Handphone</label>
+                    <input type="text" name="no_hp" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa fa-user"></i> Jenis Kelamin</label>
+                    <select class="form-control" name="jeniskelamin">
+                        <option value="Pria">Laki-laki</option>
+                        <option value="Wanita">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa fa-calendar-alt"></i> Tahun Lahir</label>
+                    <select class="form-control" name="tahunlahir">
+                        <option value="">Pilih Tahun Lahir</option>
+                        @for ($i = date('Y'); $i > 1900; $i--)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </select>
+                </div>
+                
+                
                 <div class="form-group">
                     <label><i class="fa fa-user"></i> Username</label>
                     <input type="text" name="username" class="form-control" placeholder="Username" required="">
                 </div>
                 <div class="form-group">
                     <label><i class="fa fa-key"></i> Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <div class="form-group">
-                    <label><i class="fa fa-address-book"></i> Role</label>
-                    <input type="text" name="role" class="form-control" value="Admin" readonly>
+                    <input type="password" name="password" class="form-control" placeholder="Password" pattern=".{8,}" title="Min 8 Max 8 characters" required="">
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">
                     <i class="fa fa-user"></i> Daftar
                 </button>
                 <hr>
-                <p class="text-center">Sudah punya akun silahkan <a href="/login" class="text-info text-gradient font-weight-bold">Login Disini!</a></p>
+                <p class="text-center">Sudah punya akun silahkan <br><a href="/login" class="btn btn-primary text-info text-gradient font-weight-bold">Login Disini!</a></p>
             </form>
                 </div>
                 
@@ -130,48 +162,7 @@ Nobel Indonesia
       </div>
     </section>
   </main>
-  <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
-  <footer class="footer py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mb-4 mx-auto text-center">
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-            Nobel Indonesia
-          </a>
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-            Berita
-          </a>
-        </div>
-        <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg fab fa-dribbble"></span>
-          </a>
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg fab fa-twitter"></span>
-          </a>
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg fab fa-instagram"></span>
-          </a>
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg fab fa-pinterest"></span>
-          </a>
-          <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
-            <span class="text-lg fab fa-github"></span>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-8 mx-auto text-center mt-1">
-          <p class="mb-0 text-secondary">
-            Copyright © <script>
-              document.write(new Date().getFullYear())
-            </script> by Programmer.
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+  
   <!--   Core JS Files   -->
   <script src="<?php echo e(asset('assetsadmin/js/core/popper.min.js')); ?>"></script>
   <script src="<?php echo e(asset('assetsadmin/js/core/bootstrap.min.js')); ?>"></script>

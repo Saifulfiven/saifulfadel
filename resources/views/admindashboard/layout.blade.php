@@ -3,7 +3,6 @@
 <head>
     @include('admindashboard.head')
     <link href="{{ asset('css/summernote-bs4.min.css') }}" rel="stylesheet">
-
 </head>
 <body class="g-sidenav-show  bg-gray-100">
     @include('admindashboard.sidebar')
@@ -16,5 +15,6 @@
     @include('admindashboard.fixedplugin')
     
     @include('admindashboard.footer')
+
 </body>
 </html>

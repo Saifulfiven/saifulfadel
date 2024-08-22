@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-Manajemen Inventory
+Fadel Print :. Login Pengguna
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -45,8 +45,8 @@ Manajemen Inventory
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid pe-0">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="/login">
-              Manajemen Inventory
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="/">
+              Fadel Printing
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon mt-2">
@@ -100,9 +100,9 @@ Manajemen Inventory
 
                   <form method="POST" action="/login" role="form">
                         @csrf
-                    <label>Email</label>
+                    <label>Username</label>
                     <div class="mb-3">
-                      <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                      <input type="text" name="username" class="form-control" placeholder="User">
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
@@ -119,8 +119,8 @@ Manajemen Inventory
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-4 text-sm mx-auto">
-                    Sudah Memiliki Akun ?
-                    <a href="javascript:;" class="text-info text-gradient font-weight-bold">Daftar</a>
+                    Sudah Memiliki Akun ?<br>
+                    <a href="/daftar" class="btn text-info text-gradient font-weight-bold">Daftar</a>
                   </p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ Manajemen Inventory
       <div class="row">
         <div class="col-lg-8 mb-4 mx-auto text-center">
           <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-            Manajemen Inventory
+            Fadel Print
           </a>
 
           <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">

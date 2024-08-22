@@ -1,8 +1,11 @@
-@extends('Landingpage.Layout')
+@extends('Landingpage.layout')
 
 @section('content')
 
 
-@include('Landingpage.Intro')
+@include('Landingpage.main')
+
+@include('Landingpage.semuaproduk')
+@include('Landingpage.feature')
 
 @endsection
