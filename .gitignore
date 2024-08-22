@@ -1,0 +1,13 @@
+
+# Ignore environment files
+.env
+
+# Ignore compiled output
+/dist
+/build
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+/resources
+/public
