@@ -16,7 +16,7 @@ use App\Http\Controllers\CartController;
 |
 */
 
-// saiful print baru
+// saiful print baru saya
 Route::get('/', 'App\Http\Controllers\LandingPageController@index')->name('landingpage');
 Route::get('/detailproduk/{slug}', 'App\Http\Controllers\LandingPageController@detailproduk')->where('slug', '[a-z0-9\-]+');
 Route::get('/semua-produk', 'App\Http\Controllers\LandingPageController@semuaproduk')->name('semua-produk');
